@@ -1,0 +1,78 @@
+.bk {
+    background-color: #fefefe;
+    width: max-content;
+}
+
+nav.navbar > a.active {
+    font-weight: bolder;
+}
+
+.tr-selected {
+    background-color: #F7C7C3;
+}
+
+table.edit > thead, table.create > thead, table.show > thead {
+    background-color: #E7EFFA;
+}
+
+table, th, td {
+    border: 1px solid lightgray;
+    border-collapse: collapse;
+}
+
+table.show th, table.show td {
+    padding: 5px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.manage-btn-container {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+
+.manage-btn-container button {
+    flex: 1;
+    height: 100%;
+}
+
+.after-id-prefix {
+    display: inline-flex;
+    width: 75%;
+}
+
+#createBtn {
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+}
+
+.manage-cell-left {
+    width: 40%;
+    height: 100%;
+}
+
+.manage-cell-right {
+    width: 60%;
+    height: 100%;
+}
+
+.update-button, #create-block, #success, #invalid, #hideNewBtn {
+    display: none;
+}
+
+.manage-cell-edit{
+    width: 100%;
+    height: 100%;
+}
+
+/*style="flex:1;height:100%;"*/
