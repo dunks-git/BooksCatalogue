@@ -29,6 +29,7 @@
             </tbody>
         </table>
     </div>
+    @can('view', auth()->user())
     <div class="btn-toolbar" role="toolbar">
         <div class="btn-group mr-2" role="group">
             <a href=" {{ route('admin.book.edit', $book )}}">
@@ -44,6 +45,7 @@
             </form>
         </div>
     </div>
+    @endcan
     <p class="mt-3">
         <a href="{{ url()->previous() }}">&larr; Back</a>
     </p>
