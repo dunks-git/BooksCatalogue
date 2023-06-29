@@ -10,5 +10,3 @@
 3. Manage books
 4. Watch 5 minutes video in latvian as proof that this code works:
     * https://youtu.be/v8YwWKhhSGw
-
-
