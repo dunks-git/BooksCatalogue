@@ -1,11 +1,11 @@
 $(document).ready(function () {
-     $('#invalid').click(function () {
-         $(this).hide();
-     });
+    $('#invalid').click(function () {
+        $(this).hide();
+    });
 
-     $('#success').click(function () {
-         $(this).hide();
-     });
+    $('#success').click(function () {
+        $(this).hide();
+    });
 
     $('.edit-button').click(function (e) {
         e.stopPropagation();
@@ -139,7 +139,7 @@ $(document).ready(function () {
                 $('#invalid').show().html(htmlErrors);
             },
             success: function (response, textStatus, jqXHR) {
-                $('#success').show().html('Book bk'+response.data.id+' created! Refresh to see it.');
+                $('#success').show().html('Book bk' + response.data.id + ' created! Refresh to see it.');
             },
             complete: function () {
                 createBtn.prop('disabled', false).html('Save');
@@ -147,7 +147,7 @@ $(document).ready(function () {
         });
     });
 
-    $('#newBtn').click(function(e){
+    $('#newBtn').click(function (e) {
         e.preventDefault();
         e.stopPropagation();
         $('#create-block').show();
@@ -156,7 +156,7 @@ $(document).ready(function () {
         $(document).scrollTop($(document).height());
     });
 
-    $('#hideNewBtn').click(function(e){
+    $('#hideNewBtn').click(function (e) {
         e.stopPropagation();
         $('#create-block').hide();
         $(this).hide();

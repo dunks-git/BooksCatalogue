@@ -49,7 +49,8 @@
             <tbody>
             @foreach($books as $book)
                 <tr>
-                    <form action="{{ route('admin.book.update', $book) }}" id="bookUpdateForm{{ $book->id }}" class="book-update-form"
+                    <form action="{{ route('admin.book.update', $book) }}" id="bookUpdateForm{{ $book->id }}"
+                          class="book-update-form"
                           method="post">
                         @csrf
                         @method('patch')
@@ -59,7 +60,7 @@
                                    value="{{ $book->author }}"
                                    placeholder="Author" required readonly></td>
                         <td><textarea type="text" class="form-control editable deletable" name="title"
-                                   placeholder="Title" required readonly>{{ $book->title }}</textarea></td>
+                                      placeholder="Title" required readonly>{{ $book->title }}</textarea></td>
                         <td><input class="form-control editable deletable" list="genreListOptions" name="genre"
                                    value="{{ $book->genre->title }}"
                                    placeholder="Type to search..." required readonly></td>
@@ -87,7 +88,8 @@
                                 </button>
                             </div>
                             <div class="manage-cell-right">
-                                <form action=" {{ route('admin.book.destroy', $book ) }}" class="book-delete-form" method="post">
+                                <form action=" {{ route('admin.book.destroy', $book ) }}" class="book-delete-form"
+                                      method="post">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-danger btn-sm ml-1 mr-1 delete-button">Delete
