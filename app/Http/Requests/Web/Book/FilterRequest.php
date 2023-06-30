@@ -29,6 +29,7 @@ class FilterRequest extends FormRequest
             'publish_year' => 'integer',
             'description' => 'string',
             'genre_id' => 'integer|min:1',
+            'genre' => 'string',
             'page'=>'',
             'per_page'=>'',
         ];

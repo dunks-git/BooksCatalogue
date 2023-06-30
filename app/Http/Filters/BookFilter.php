@@ -13,6 +13,7 @@ class BookFilter extends AbstractFilter
     public const PUBLISH_YEAR = 'publish_year';
     public const DESCRIPTION = 'description';
     public const GENRE_ID = 'genre_id';
+    public const GENRE = 'genre';
 
     protected function getCallbacks(): array
     {
@@ -24,6 +25,7 @@ class BookFilter extends AbstractFilter
             self::PUBLISH_YEAR => [$this, 'publishYear'],
             self::DESCRIPTION => [$this, 'description'],
             self::GENRE_ID => [$this, 'genreId'],
+            self::GENRE => [$this, 'genre'],
         ];
     }
 
@@ -60,6 +62,11 @@ class BookFilter extends AbstractFilter
     public function genreId(Builder $builder, $value)
     {
         $builder->where('genre_id', $value);
+    }
+
+    public function genre(Builder $builder, $value)
+    {
+        $builder->join('genres', 'genres.id', '=', 'genre_id')->where('genres.title', $value)->select('books.*');
     }
 
 }

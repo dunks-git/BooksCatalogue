@@ -47,7 +47,7 @@
     </div>
     @endcan
     <p class="mt-3">
-        <a href="{{ url()->previous() }}">&larr; Back</a>
+        <a href="{{ url('books') }}">&larr; Back</a>
     </p>
 @endsection
 
