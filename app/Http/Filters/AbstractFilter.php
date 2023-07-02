@@ -7,16 +7,14 @@ use Illuminate\Database\Eloquent\Builder;
 abstract class AbstractFilter implements FilterInterface
 {
 
-    private array $queryParams;
 
     /**
      * AbstractFilter constructor.
      *
      * @param array $queryParams
      */
-    public function __construct(array $queryParams)
+    public function __construct(private array $queryParams)
     {
-        $this->queryParams = $queryParams;
     }
 
     abstract protected function getCallbacks(): array;
