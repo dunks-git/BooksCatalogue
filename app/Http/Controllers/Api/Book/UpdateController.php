@@ -15,7 +15,12 @@ class UpdateController extends BaseController
      */
     public function __invoke(UpdateRequest $request, Book $book)
     {
-        return $this->service->update($book, $request->validated());
+        try {
+            return $this->service->update($book, $request->validated() );
 //        return new BookResource($book); // in case if service->update returns Book object
+        } catch (\Exception $e) {
+            return response()->json(["data" => null, "error" => $e->getMessage() . " bookId: " . $book->id], 400, ['Content-Type' => 'application/json']);
+        }
     }
+
 }

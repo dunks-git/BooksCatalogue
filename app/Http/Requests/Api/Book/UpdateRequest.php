@@ -32,4 +32,13 @@ class UpdateRequest extends FormRequest
             'description' => 'string',
         ];
     }
+
+    public function failedValidation(\Illuminate\Contracts\Validation\Validator $validator)
+    {
+        $errors = $validator->errors();
+        if ($errors->count() > 0) {
+            return $errors->toJson();
+        }
+        return null;
+    }
 }
