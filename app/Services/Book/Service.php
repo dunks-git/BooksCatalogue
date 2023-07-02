@@ -43,10 +43,14 @@ class Service
     {
         try {
             DB::beginTransaction();
-            $genre = Genre::withTrashed()->firstOrCreate(['title' => $data['genre']]);
-            $data['genre_id'] = $genre->id;
-            unset($data['genre']);
-            $data['price'] = priceToInt($data['price']);
+            if (array_key_exists('genre', $data) && strlen($data['genre']) > 2) {
+                $genre = Genre::withTrashed()->firstOrCreate(['title' => $data['genre']]);
+                $data['genre_id'] = $genre->id;
+                unset($data['genre']);
+            }
+            if (array_key_exists('price', $data)) {
+                $data['price'] = priceToInt($data['price']);
+            }
             $book->update($data);
             $book->fresh();
             DB::commit();

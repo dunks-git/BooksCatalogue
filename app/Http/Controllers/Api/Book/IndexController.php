@@ -7,10 +7,14 @@ use App\Http\Filters\BookFilter;
 use App\Http\Requests\Web\Book\FilterRequest;
 use App\Http\Resources\Book\BookResource;
 use App\Models\Book;
+use Illuminate\Contracts\Container\BindingResolutionException;
 
 
 class IndexController extends BaseController
 {
+    /**
+     * @throws BindingResolutionException
+     */
     public function __invoke(FilterRequest $request)
     {
         $data = $request->validated();
