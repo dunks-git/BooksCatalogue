@@ -29,7 +29,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
     Route::group(['middleware' => 'jwt.auth', 'namespace' => 'Api'], function () {
         Route::group(['namespace' => 'Book', 'prefix' => 'books'], function () {
             Route::get('', 'IndexController');
-
+            Route::patch('{book}', 'UpdateController');
         });
     });
 });

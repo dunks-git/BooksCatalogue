@@ -7,9 +7,7 @@ use App\Services\Book\Service;
 
 class BaseController extends Controller
 {
-    public Service $service;
-    public function __construct( Service $service )
+    public function __construct( public Service $service )
     {
-        $this->service = $service;
     }
 }
