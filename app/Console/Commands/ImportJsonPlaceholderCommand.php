@@ -32,8 +32,11 @@ class ImportJsonPlaceholderCommand extends Command
         $data = json_decode($response->getBody()->getContents(), false, 512, JSON_UNESCAPED_UNICODE);
         foreach ($data as $d) {
 //            echo $d->title.PHP_EOL;
-            //$newTitle = trim(strtok($d->title, " "),',');
-            $newTitle = explode(' ', trim($d->title))[1];
+//            $newTitle = trim(strtok($d->title, " "),',');
+            $newTitle = strtok($d->title, " ");
+//            $newTitle = strtok(" ");
+            $newTitle = trim(strtok( " "),',');
+            //$newTitle = explode(' ', trim($d->title))[1];
             echo $newTitle . PHP_EOL;
 
             Genre::firstOrCreate([
