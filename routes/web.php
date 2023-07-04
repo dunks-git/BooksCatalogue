@@ -22,6 +22,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('home', 'HomeController')->name('home');
         Route::get('', 'MainController@index')->name('main.index');
         Route::get('vue', 'VueController@index')->name('vue.index');
+        Route::get('vue/lists', 'VueController@lists')->name('vue.lists');
+        Route::get('vue/component', 'VueController@component')->name('vue.component');
 
         Route::group(['namespace' => 'Book', 'prefix' => 'books'], function () {
             Route::get('', 'IndexController')->name('book.index');

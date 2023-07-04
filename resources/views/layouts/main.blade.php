@@ -24,7 +24,10 @@
                 | <a class="nav-link" href="{{ route('admin.book.index') }}">Admin Panel</a>
             @endcan
             | <a class="nav-link" href="{{ route('login') }}">Login/Logout</a>
+
             | <a class="nav-link" href="{{ route('vue.index') }}">Vue</a>
+            | <a class="nav-link" href="{{ route('vue.lists') }}">Vue lists</a>
+            | <a class="nav-link" href="{{ route('vue.component') }}">Vue component</a>
         </nav>
     </div>
     @yield('content')

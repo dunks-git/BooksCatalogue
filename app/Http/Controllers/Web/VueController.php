@@ -10,4 +10,12 @@ class VueController extends Controller
     {
         return view('vue.base');
     }
+    public function lists()
+    {
+        return view('vue.lists');
+    }
+    public function component()
+    {
+        return view('vue.component');
+    }
 }
