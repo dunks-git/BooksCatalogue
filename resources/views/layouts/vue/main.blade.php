@@ -12,7 +12,7 @@
     <script src="{{ asset('https://cdn.tailwindcss.com') }}"></script>
 
 </head>
-<body class="h-full grid place-items-center">
+<body class="h-full grid place-items-center bg-gray-800 text-white">
 @yield('content')
 </body>
 </html>
