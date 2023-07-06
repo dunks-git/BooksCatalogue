@@ -17,7 +17,7 @@ export default {
     },
     methods: {
         add() {
-            this.$emit('addEvent',this.newAssignment, false);
+            this.$emit('addEvent',this.newAssignment, false, 'all');
 
             // this.assignments.push({
             //     name: this.newAssignment,
