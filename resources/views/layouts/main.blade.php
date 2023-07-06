@@ -28,6 +28,9 @@
             | <a class="nav-link" href="{{ route('vue.index') }}">Vue</a>
             | <a class="nav-link" href="{{ route('vue.lists') }}">Vue lists</a>
             | <a class="nav-link" href="{{ route('vue.component') }}">Vue component</a>
+            | <a class="nav-link" href="{{ route('vue.component.files') }}">Vue component files</a>
+            | <a class="nav-link" href="{{ route('vue.component.props') }}">Vue component props</a>
+            | <a class="nav-link" href="{{ route('vue.component.together') }}">Vue component together</a>
         </nav>
     </div>
     @yield('content')

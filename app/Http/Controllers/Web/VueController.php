@@ -18,4 +18,16 @@ class VueController extends Controller
     {
         return view('vue.component');
     }
+    public function componentFiles()
+    {
+        return view('vue.component_files');
+    }
+    public function componentProps()
+    {
+        return view('vue.component_props');
+    }
+    public function componentTogether()
+    {
+        return view('vue.component_together');
+    }
 }
