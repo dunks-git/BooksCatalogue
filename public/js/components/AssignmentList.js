@@ -1,6 +1,17 @@
 import Assignment from "./Assignment.js";
 import AssignmentTags from "./AssignmentTags.js";
 
+// <assignment-tags
+//             :initial-tags="assignments.map(a => a.tag)"
+// :current-tag="currentTag"
+// @change="currentTag=$event"
+//     />
+
+// <assignment-tags
+//     v-model="currentTag"
+//             :initial-tags="assignments.map(a => a.tag)"
+//     />
+
 export default {
     components: {AssignmentTags, Assignment},
     template: `
@@ -8,9 +19,8 @@ export default {
         <h2 className="font-bold mb-2">@{{ title }} <span>(@{{ assignments.length }})</span></h2>
 
         <assignment-tags
+            v-model:currentTag="currentTag"
             :initial-tags="assignments.map(a => a.tag)"
-            :current-tag="currentTag"
-            @change="currentTag=$event"
         />
 
         <ul class="border border-gray-600 p-3 divide-y mt-4">

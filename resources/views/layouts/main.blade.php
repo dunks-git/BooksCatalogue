@@ -31,6 +31,7 @@
             | <a class="nav-link" href="{{ route('vue.component.files') }}">Vue component files</a>
             | <a class="nav-link" href="{{ route('vue.component.props') }}">Vue component props</a>
             | <a class="nav-link" href="{{ route('vue.component.together') }}">Vue component together</a>
+            | <a class="nav-link" href="{{ route('vue.model.deeper') }}">Vue model deeper</a>
         </nav>
     </div>
     @yield('content')

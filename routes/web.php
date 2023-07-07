@@ -27,6 +27,7 @@ Route::group(['namespace' => 'App\Http\Controllers'], function () {
         Route::get('vue/component/files', 'VueController@componentFiles')->name('vue.component.files');
         Route::get('vue/component/props', 'VueController@componentProps')->name('vue.component.props');
         Route::get('vue/component/together', 'VueController@componentTogether')->name('vue.component.together');
+        Route::get('vue/component/model/deeper', 'VueController@modelDeeper')->name('vue.model.deeper');
 
         Route::group(['namespace' => 'Book', 'prefix' => 'books'], function () {
             Route::get('', 'IndexController')->name('book.index');

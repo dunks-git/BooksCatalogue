@@ -30,4 +30,8 @@ class VueController extends Controller
     {
         return view('vue.component_together');
     }
+    public function modelDeeper()
+    {
+        return view('vue.model_deeper');
+    }
 }
