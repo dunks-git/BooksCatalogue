@@ -36,13 +36,13 @@
     <div id="app">
         {{--        <app-button type="primary">Submit</app-button>--}}
         {{--        <app-button :processing=true>Submit</app-button>--}}
-        <app-button :processing=true>Submit</app-button>
+{{--        <app-button :processing=true>Submit</app-button>--}}
     </div>
     <script type="module">
         import App from "{{asset('js/components/app.js')}}";
 
         var vuapp = Vue.createApp(App);
-        vuapp.config.compilerOptions.delimiters = ['${', '}'];
+        vuapp.config.compilerOptions.delimiters = ['@@{{', '}}'];
         vuapp.mount('#app');
 
     </script>
