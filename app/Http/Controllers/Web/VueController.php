@@ -10,4 +10,28 @@ class VueController extends Controller
     {
         return view('vue.base');
     }
+    public function lists()
+    {
+        return view('vue.lists');
+    }
+    public function component()
+    {
+        return view('vue.component');
+    }
+    public function componentFiles()
+    {
+        return view('vue.component_files');
+    }
+    public function componentProps()
+    {
+        return view('vue.component_props');
+    }
+    public function componentTogether()
+    {
+        return view('vue.component_together');
+    }
+    public function modelDeeper()
+    {
+        return view('vue.model_deeper');
+    }
 }
